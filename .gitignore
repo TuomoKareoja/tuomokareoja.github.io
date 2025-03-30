@@ -1,0 +1,13 @@
+/public/
+/resources/_gen/
+/node_modules/
+
+hugo.exe
+hugo.linux
+hugo.darwin
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
