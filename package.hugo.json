@@ -1,4 +1,28 @@
+
 {
   "name": "tuomokareoja.github.io",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "description": "Data Project Showcase",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuomokareoja/tuomokareoja.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tuomokareoja/tuomokareoja.github.io/issues"
+  },
+  "keywords": ["Tuomo Kareoja", "website", "portfolio", "data science"],
+  "scripts": {
+    "lint": "npm run lint:css && npm run lint:js && npm run lint:md",
+    "lint:css": "stylelint --fix **/*.css",
+    "lint:js": "eslint --fix --ext js .",
+    "lint:md": "markdownlint --fix **/*.md",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.css": "stylelint --fix --allow-empty-input",
+    "*.js": "eslint --cache --fix",
+    "*.md": "markdownlint --fix"
+  }
 }

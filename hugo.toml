@@ -6,12 +6,37 @@ title = 'My New Hugo Site'
   # dark or light, defaults to light
   defaultTheme = "dark"
   # gray red green yellow blue purple aqua orange, defaults to blue
-  themeColor = "aqua"
+  themeColor = "orange"
   # soft medium hard, defaults to medium
   themeContrast = "hard"
   author = "Tuomo Kareoja"
   subtitle = "Data Scientist/Analyst"
   description = "Modern Drifter"
+  [params.logo]
+    text = ""
+    url = "/projects"
+  [params.prism]
+    languages = [
+      "markup",
+      "css",
+      "clike",
+      "javascript",
+      "bash",
+      "csharp",
+      "hcl",
+      "ignore",
+      "json",
+      "markdown",
+      "powershell",
+      "toml",
+      "yaml"
+    ]
+    plugins = [
+      "normalize-whitespace",
+      "toolbar",
+      "copy-to-clipboard",
+      "command-line"
+    ]
 
 [markup]
   # (Optional) To be able to use all Prism plugins, the theme enables unsafe
@@ -21,6 +46,16 @@ title = 'My New Hugo Site'
 [build]
   # Merge build config of the theme
   _merge = "deep"
+
+[outputs]
+  home = ["html", "searchIndex"]
+
+[outputFormats]
+  [outputFormats.searchIndex]
+    mediaType = "application/json"
+    baseName = "search-index"
+    isPlainText = true
+    notAlternative = true
 
 [caches]
   [caches.images]
@@ -78,9 +113,9 @@ title = 'My New Hugo Site'
 
   [menu]
   [[menu.main]]
-    identifier = "showcase"
-    name = "Showcase"
-    url = "/showcase"
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects"
     weight = 20
   [[menu.main]]
     identifier = "cv"
